@@ -1,20 +1,19 @@
 
 /* Variables */
-$vin-blue: #5bb7db;
-$vin-green: #60b044;
-$vin-red: #ff0000;
+$vin-blue: #008cba;
 
-/* Styles */
+/* Global Styles */
 html {
 	font-family: 'Open Sans', sans-serif !important;
 }
+
 body {
 	font-family: 'Open Sans', sans-serif !important;
 	line-height: 1.4em;
 	color: #4d4d4d;
 }
 
-h2 {
+h1, h2, h3, h4, h5 {
 	color: $vin-blue;
 }
 
@@ -23,6 +22,10 @@ p {
 }
 
 .suggestions-modal {
+
+	h4 {
+		color: darken(#999, 25%);
+	}
 
 	ul {
 		li {

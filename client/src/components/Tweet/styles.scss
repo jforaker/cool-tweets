@@ -1,4 +1,16 @@
 .thumb {
 	border: none;
 	margin-bottom: 0;
+
+	h5 {
+		color: #999;
+	}
+
+	p {
+		font-size: 15px;
+
+		@media (max-width: 500px) {
+			font-size: 12px;
+		}
+	}
 }

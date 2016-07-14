@@ -2,6 +2,7 @@ import {
 	CHANGE_QUERY,
 	RECEIVE_STATUSES_SUCCESS,
 	REQUEST_STATUSES,
+	NO_STATUSES_FOUND,
 	OPEN_MODAL
 } from '../constants/actionTypes';
 
@@ -9,6 +10,7 @@ const initialState = {
 	isRequesting: false,
 	query: 'cnnmoney',
 	statuses: [],
+	noneFound: false,
 	modalIsOpen: false
 };
 
@@ -29,7 +31,14 @@ export default function statusSearch(state = initialState, action) {
 		case RECEIVE_STATUSES_SUCCESS:
 			return {
 				...state,
-				statuses: action.statuses
+				statuses: action.statuses,
+				noneFound: false
+			};
+		case NO_STATUSES_FOUND:
+			return {
+				...state,
+				isRequesting: false,
+				noneFound: true
 			};
 		case OPEN_MODAL:
 			return {

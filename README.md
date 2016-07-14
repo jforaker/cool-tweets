@@ -4,7 +4,7 @@
 frontend hosted on [Surge](https://surge.sh/) and api hosted on [Zeit/now](https://zeit.co/now)
 
 ### Get Started
-1. **Clone the project**. `git clone https://github.com/jforaker/cool-tweets.git`.
+1. **Clone the project**. `git clone https://github.com/jforaker/cool-tweets.git`
 2. **Open two terminal tabs**
 - first tab: `cd api` and then `npm install`
 - second tab: `cd client` and then `npm run setup`

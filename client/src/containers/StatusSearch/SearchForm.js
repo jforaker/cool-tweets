@@ -23,7 +23,7 @@ export class SearchForm extends Component {
 						<FormControl
 							type="text"
 							className="input"
-							placeholder="something"
+							placeholder="something cool"
 							value={query}
 							onChange={onChangeQuery}
 						/>

@@ -13,7 +13,7 @@ export class StatusSearch extends Component {
 	render() {
 
 		const {
-			statusSearch: {statuses, isRequesting, modalIsOpen},
+			statusSearch: { statuses, isRequesting, modalIsOpen, noneFound },
 			onOpenModal,
 			onLoadSuggestion
 			} = this.props;
@@ -24,7 +24,7 @@ export class StatusSearch extends Component {
 					<SearchForm {...this.props} />
 					<Suggestions toggleModal={onOpenModal} modalIsOpen={modalIsOpen} load={onLoadSuggestion}/>
 				</Jumbotron>
-				<StatusResults statuses={statuses} isRequesting={isRequesting}/>
+				<StatusResults statuses={statuses} isRequesting={isRequesting} noneFound={noneFound}/>
 			</Col>
 		);
 	}

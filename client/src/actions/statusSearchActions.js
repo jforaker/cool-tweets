@@ -24,6 +24,10 @@ export function receiveStatusesError(statuses) {
 	};
 }
 
+export function noStatusesFound() {
+	return {type: types.NO_STATUSES_FOUND};
+}
+
 export function changeQuery(query) {
 	return {type: types.CHANGE_QUERY, query};
 }
@@ -48,6 +52,9 @@ export function fetchStatuses() {
 		dispatch(requestStatuses(true));
 		return request.get(requestURL)
 			.then(function (response) {
+				if (!response.body.statuses.length){
+					return dispatch(noStatusesFound());
+				}
 				dispatch(receiveStatusesSuccess(response.body.statuses));
 			}, function (error) {
 				console.warn(`error getting ${requestURL}`, error);
