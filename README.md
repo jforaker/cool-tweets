@@ -9,7 +9,7 @@ frontend hosted on [Surge](https://surge.sh/) and api hosted on [Zeit/now](https
 - first tab: `cd api` and then `npm install`
 - second tab: `cd client` and then `npm run setup`
 3. **In the `api` tab Run the server (will start on port 8080)**. `npm start`
-4. **In the `client` tab Run the react app (will start on port 8080)**. `npm start`
+4. **In the `client` tab Run the react app (will start on port 3000)**. `npm start`
 This will run the automated build process, start up a webserver, and open the application in your default browser. When doing development, this command will continue watching all your files. Every time you hit save the code is rebuilt, linting runs, and tests run automatically.
  
 
