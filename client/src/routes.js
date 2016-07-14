@@ -11,7 +11,7 @@ import StatusSearch from './containers/StatusSearch';
 export default (
 	<Route path="/" component={App}>
 		<IndexRoute component={HomePage}/>
-		<Route path="repo-search" component={StatusSearch}/>
+		<Route path="tweets-search" component={StatusSearch}/>
 		<Route path="about" component={AboutPage}/>
 		<Route path="*" component={NotFoundPage}/>
 	</Route>

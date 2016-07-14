@@ -32,4 +32,5 @@ Cool-Tweets uses the following technologies:
 | [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
 
 
-### Technologies
+#### Note: 
+Surge provides very basic hosting without functionality for redirects (unless you have a [paid account](https://surge.sh/help/adding-redirects)), therefore refreshing on a nested route will throw an error.

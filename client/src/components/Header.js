@@ -29,7 +29,7 @@ class Header extends Component {
 				</Navbar.Header>
 				<Navbar.Collapse>
 					<Nav pullRight onSelect={this.handleSelect}>
-						<NavItem eventKey={'repo-search'}>Search Tweets</NavItem>
+						<NavItem eventKey={'tweets-search'}>Search Tweets</NavItem>
 						<NavItem eventKey={'about'} href="#">About</NavItem>
 					</Nav>
 				</Navbar.Collapse>
