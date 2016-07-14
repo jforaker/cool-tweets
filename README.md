@@ -35,6 +35,7 @@ Cool-Tweets uses the following technologies:
 
 ### Other Open Source libraries used:
 [twit](https://github.com/ttezel/twit) - Twitter API Client for node (REST & Streaming API)
+
 [react-bootstrap](https://react-bootstrap.github.io/) - The most popular front-end framework, rebuilt for React
 
 
