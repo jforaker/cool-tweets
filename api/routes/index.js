@@ -6,7 +6,6 @@ var express = require('express');
 var router = express.Router();
 var errMsg = 'Error communicating with Twitter! Try again!';
 
-
 function handleErr (err, res) {
     res.status(err.status || 500);
     res.json({

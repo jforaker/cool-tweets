@@ -20,7 +20,7 @@ const StatusResults = ({statuses, isRequesting}) => {
 
 StatusResults.propTypes = {
 	statuses: PropTypes.array,
-	isRequesting: PropTypes.bool.isRequired
+	isRequesting: PropTypes.bool
 };
 
 //eslint-disable-next-line import/no-named-as-default

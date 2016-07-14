@@ -18,7 +18,6 @@ var keys = {
     access_token_secret: 'J4BcOTPZzWaXXK93ntSerdOE6racRwtcnacP8FuJ33uSk',
     timeout_ms: 60 * 1000  // optional HTTP request timeout to apply to all requests.
 };
-
 app.server = http.createServer(app);
 app.use(cors());
 app.use(bodyParser.json());
@@ -35,7 +34,6 @@ app.use(function (err, req, res, next) {
 });
 //Make the Twitter class available app-wide via req.app.get('Twitter')
 app.set('Twitter', new Twitter(keys));
-
 app.server.listen(port, function () {
     console.log('Started on port ' + app.server.address().port);
 });
