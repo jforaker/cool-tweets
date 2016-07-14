@@ -1,6 +1,6 @@
 # Cool-Tweets
 
-## [Demo](http://rainy-step.surge.sh/repo-search)
+## [Demo](http://protective-verse.surge.sh/)
 frontend hosted on [Surge](https://surge.sh/) and api hosted on [Zeit/now](https://zeit.co/now)
 
 ### Get Started
