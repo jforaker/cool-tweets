@@ -3,14 +3,13 @@
  */
 
 import React, {PropTypes} from 'react';
-import { Button, Thumbnail} from 'react-bootstrap';
+import { Thumbnail, Image } from 'react-bootstrap';
+import './styles.scss';
 
 const Tweet = ({text, user}) => {
-
-	console.log('status user..', user);
-
 	return (
-		<Thumbnail src="https://react-bootstrap.github.io/assets/thumbnaildiv.png" alt="242x200">
+		<Thumbnail className="thumb">
+			<Image src={user.profile_image_url} circle/>
 			<h5>@{user.name}</h5>
 			<p>{text}</p>
 		</Thumbnail>
@@ -18,8 +17,8 @@ const Tweet = ({text, user}) => {
 };
 
 Tweet.propTypes = {
-	status: PropTypes.object.isRequired
+	text: PropTypes.string,
+	user: PropTypes.object
 };
 
-//eslint-disable-next-line import/no-named-as-default
 export default Tweet;

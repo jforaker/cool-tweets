@@ -18,3 +18,22 @@ h2 {
 	color: $vin-blue;
 }
 
+p {
+	line-height: 1.3em;
+}
+
+.suggestions-modal {
+
+	ul {
+		li {
+			list-style: none;
+			color: $vin-blue;
+			cursor: pointer;
+		}
+	}
+}
+
+*:focus {
+	//remove blue outline thing http://stackoverflow.com/a/34635972/1516309
+	outline: none !important
+}

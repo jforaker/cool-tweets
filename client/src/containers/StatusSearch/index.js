@@ -1,44 +1,30 @@
+/* eslint-disable import/no-named-as-default */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import { changeQuery, fetchStatuses } from '../../actions/statusSearchActions';
+import { changeQuery, fetchStatuses, toggleModal } from '../../actions/statusSearchActions';
 import StatusResults from '../../components/StatusResults/StatusResults';
-import { Col, Jumbotron, Form, Button, FormGroup, FormControl, ControlLabel} from 'react-bootstrap';
+import SearchForm from './SearchForm';
+import Suggestions from '../../components/Suggestions/Suggestions';
+import { Col, Jumbotron } from 'react-bootstrap';
 import './styles.scss';
 
 export class StatusSearch extends Component {
 
-	constructor(props, context) {
-		super(props, context);
-	}
-
 	render() {
+
+		const {
+			statusSearch: {statuses, isRequesting, modalIsOpen},
+			onOpenModal,
+			onLoadSuggestion
+			} = this.props;
+
 		return (
 			<Col xs={12} md={12} fluid>
 				<Jumbotron>
-					<Form horizontal onSubmit={this.props.onSubmitForm}>
-						<FormGroup bsSize="large" controlId="formHorizontalQuery">
-							<Col componentClass={ControlLabel} md={3} sm={2}>Search Twitter!</Col>
-							<Col sm={10} md={9}>
-								<FormControl
-									type="text"
-									className="input"
-									placeholder="something"
-									value={this.props.statusSearch.query}
-									onChange={this.props.onChangeQuery}
-								/>
-							</Col>
-						</FormGroup>
-						<FormGroup>
-							<Col sm={12} lg={12}>
-								<Button type="submit" bsStyle="primary" bsSize="large" block>Get tweets</Button>
-							</Col>
-						</FormGroup>
-					</Form>
-
+					<SearchForm {...this.props} />
+					<Suggestions toggleModal={onOpenModal} modalIsOpen={modalIsOpen} load={onLoadSuggestion}/>
 				</Jumbotron>
-
-				<StatusResults statuses={this.props.statusSearch.statuses}
-							   isRequesting={this.props.statusSearch.isRequesting}/>
+				<StatusResults statuses={statuses} isRequesting={isRequesting}/>
 			</Col>
 		);
 	}
@@ -47,7 +33,9 @@ export class StatusSearch extends Component {
 StatusSearch.propTypes = {
 	statusSearch: PropTypes.object.isRequired,
 	onChangeQuery: PropTypes.func.isRequired,
-	onSubmitForm: PropTypes.func.isRequired
+	onSubmitForm: PropTypes.func.isRequired,
+	onLoadSuggestion: PropTypes.func.isRequired,
+	onOpenModal: PropTypes.func.isRequired
 };
 
 function mapDispatchToProps(dispatch) {
@@ -56,6 +44,11 @@ function mapDispatchToProps(dispatch) {
 		onSubmitForm: (evt) => {
 			if (evt !== undefined && evt.preventDefault) evt.preventDefault();
 			dispatch(fetchStatuses());
+		},
+		onOpenModal: () => dispatch(toggleModal()),
+		onLoadSuggestion: (query) => {
+			dispatch(changeQuery(query));
+			dispatch(fetchStatuses(query));
 		},
 		dispatch
 	};

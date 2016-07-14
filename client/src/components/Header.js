@@ -3,8 +3,8 @@
  */
 
 import React, { PropTypes, Component } from 'react';
-import { Link, IndexLink } from 'react-router';
-import { Nav, NavItem, Navbar, MenuItem, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router';
+import { Nav, NavItem, Navbar } from 'react-bootstrap';
 
 
 class Header extends Component {

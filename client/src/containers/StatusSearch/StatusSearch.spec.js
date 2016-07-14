@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import { expect } from 'chai';
@@ -9,15 +8,19 @@ describe('<StatusSearch />', () => {
 
 	it('should render props', () => {
 		const props = {
-			onChangeUsername: () => {
-			},
 			onSubmitForm: () => {
 			},
 			onChangeQuery: () => {
 			},
+			onOpenModal: () => {
+			},
+			onLoadSuggestion: () => {
+			},
 			statusSearch: {
+				isRequesting: false,
 				query: 'cnnmoney',
-				statuses: [{text: 'foo'}]
+				statuses: [],
+				modalIsOpen: false
 			}
 		};
 		const wrapper = mount(<StatusSearch {...props} />);
