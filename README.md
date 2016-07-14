@@ -18,6 +18,7 @@ Cool-Tweets uses the following technologies:
 
 | **Tech** | **Description** |**Learn More**|
 |----------|-------|---|
+|  [Express](https://expressjs.com/)  |   Fast, unopinionated, minimalist web framework for Node.js.    | 
 |  [React](https://facebook.github.io/react/)  |   Fast, composable client-side components.    | [Pluralsight Course](https://www.pluralsight.com/courses/react-flux-building-applications)  |
 |  [Redux](http://redux.js.org) |  Enforces unidirectional data flows and immutable, hot reloadable store. Supports time-travel debugging. Lean alternative to [Facebook's Flux](https://facebook.github.io/flux/docs/overview.html).| [Pluralsight Course](http://www.pluralsight.com/courses/react-redux-react-router-es6)    |
 |  [React Router](https://github.com/reactjs/react-router) | A complete routing library for React | [Pluralsight Course](https://www.pluralsight.com/courses/react-flux-building-applications) |
@@ -30,6 +31,11 @@ Cool-Tweets uses the following technologies:
 | [SASS](http://sass-lang.com/) | Compiled CSS styles with variables, functions, and more. | [Pluralsight Course](https://www.pluralsight.com/courses/better-css)|
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | [IDE Plugins](http://editorconfig.org/#download) |
 | [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
+
+
+### Other Open Source libraries used:
+[twit](https://github.com/ttezel/twit) - Twitter API Client for node (REST & Streaming API)
+[react-bootstrap](https://react-bootstrap.github.io/) - The most popular front-end framework, rebuilt for React
 
 
 #### Note: 
