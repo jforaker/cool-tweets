@@ -1,5 +1,6 @@
-## Cool-Tweets
+# Cool-Tweets
 
+## [Demo](http://rainy-step.surge.sh/repo-search): frontend hosted on [Surge](https://surge.sh/) and api hosted on [Zeit/now](https://zeit.co/now)
 
 ### Get Started
 1. **Clone the project**. `git clone https://github.com/jforaker/cool-tweets.git`.
@@ -29,3 +30,5 @@ Cool-Tweets uses the following technologies:
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | [IDE Plugins](http://editorconfig.org/#download) |
 | [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
 
+
+### Technologies
