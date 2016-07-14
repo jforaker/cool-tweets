@@ -1,6 +1,7 @@
 # Cool-Tweets
 
-## [Demo](http://rainy-step.surge.sh/repo-search): frontend hosted on [Surge](https://surge.sh/) and api hosted on [Zeit/now](https://zeit.co/now)
+## [Demo](http://rainy-step.surge.sh/repo-search)
+frontend hosted on [Surge](https://surge.sh/) and api hosted on [Zeit/now](https://zeit.co/now)
 
 ### Get Started
 1. **Clone the project**. `git clone https://github.com/jforaker/cool-tweets.git`.
