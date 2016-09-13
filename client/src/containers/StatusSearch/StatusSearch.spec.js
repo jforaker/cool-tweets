@@ -18,13 +18,13 @@ describe('<StatusSearch />', () => {
 			},
 			statusSearch: {
 				isRequesting: false,
-				query: 'cnnmoney',
+				query: 'nyc',
 				statuses: [],
 				modalIsOpen: false
 			}
 		};
 		const wrapper = mount(<StatusSearch {...props} />);
-		expect(wrapper.props().statusSearch.query).to.equal('cnnmoney');
+		expect(wrapper.props().statusSearch.query).to.equal('nyc');
 	});
 
 });

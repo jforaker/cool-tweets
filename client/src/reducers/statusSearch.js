@@ -8,7 +8,7 @@ import {
 
 const initialState = {
 	isRequesting: false,
-	query: 'cnnmoney',
+	query: 'nyc',
 	statuses: [],
 	noneFound: false,
 	modalIsOpen: false
